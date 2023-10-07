@@ -3,6 +3,7 @@ import {
   Links,
   LiveReload,
   Meta,
+  Outlet,
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
@@ -27,6 +28,9 @@ export default function App() {
         <div id="sidebar">
           <h1>Remix Contacts</h1>
           <div>
+          <div id="detail">
+          <Outlet />
+        </div>
             <Form id="search-form" role="search">
               <input
                 id="q"
