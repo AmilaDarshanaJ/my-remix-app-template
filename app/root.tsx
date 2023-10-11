@@ -1,5 +1,6 @@
 import {
   Form,
+  Link,
   Links,
   LiveReload,
   Meta,
@@ -28,9 +29,12 @@ export default function App() {
         <div id="sidebar">
           <h1>Remix Contacts</h1>
           <div>
+
           <div id="detail">
           <Outlet />
+          
         </div>
+
             <Form id="search-form" role="search">
               <input
                 id="q"
@@ -48,10 +52,10 @@ export default function App() {
           <nav>
             <ul>
               <li>
-                <a href={`/contacts/1`}>Your Name</a>
+                <Link to={`/contacts/1`}>Your Name</Link>
               </li>
               <li>
-                <a href={`/contacts/2`}>Your Friend</a>
+                <Link to={`/contacts/2`}>Your Friend</Link>
               </li>
             </ul>
           </nav>
