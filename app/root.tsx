@@ -47,11 +47,6 @@ export default function App() {
           <h1>Remix Contacts</h1>
           <div>
 
-          <div id="detail">
-          <Outlet />
-          
-        </div>
-
             <Form id="search-form" role="search">
               <input
                 id="q"
@@ -92,6 +87,9 @@ export default function App() {
               </p>
             )}
           </nav>
+        </div>
+        <div id="detail">
+          <Outlet />
         </div>
 
         <ScrollRestoration />
