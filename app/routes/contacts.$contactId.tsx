@@ -68,7 +68,7 @@ export default function Contact() {
               const response = confirm(
                 "Please confirm you want to delete this record."
               );
-              if (!response) {
+              if (!response) { 
                 event.preventDefault();
               }
             }}
