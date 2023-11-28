@@ -10,6 +10,7 @@ import {
   ScrollRestoration,
   useLoaderData,
   useNavigation,
+  useSubmit,
 } from "@remix-run/react";
 
 import type { LinksFunction, LoaderFunctionArgs } from "@remix-run/node";
@@ -40,6 +41,7 @@ export default function App() {
 
   const { contacts, q } = useLoaderData<typeof loader>();
   const navigation = useNavigation();
+  const submit = useSubmit();
   const [query, setQuery] = useState(q || "");
 
   useEffect(() => {
@@ -63,7 +65,11 @@ export default function App() {
           <h1>Remix Contacts</h1>
           <div>
 
-            <Form id="search-form" role="search">
+            <Form id="search-form"
+              onChange={(event) =>
+                submit(event.currentTarget)
+              }
+            role="search">
               <input
                 id="q"
                 name="q"
